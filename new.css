@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+ body{
+    background-image: url(star.jpg);
+    background-position: center;
+    background-size: cover;
+    animation: move 8s linear infinite;
+ }
+
+ .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .hny{
+    font-size: 30px;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    animation: effect 2s linear infinite;
+
+ }
+ @keyframes effect{
+    from{
+        text-shadow: 0 0 10px #bd9393,
+        0 0 60px #d7d7d7,
+        0 0 70px #fff;
+    }
+    to{
+        text-shadow: 0 0  20px #8f8b8b,
+        0 0 70px #ea4545;
+    }
+ }
+ @keyframes move{
+    0%{
+        background-position: bottom;
+    }
+ }
+ .balloon{
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgba(226, 8, 12, 0.800);
+    animation: move-up  5s;
+   
+ }
+ .balloon::before{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 150px;
+    background-color: white;
+    top: 110px;
+    left: 50px;
+ }
+ .balloon::after{
+    position: absolute;
+    content: '';
+    border-bottom: 12px solid red;
+    border-left: 10px solid
+    transparent;
+    border-right: 10px solid
+    transparent;
+    top: 109px;
+    left: 41px;
+ }
+ 
+ .balloon:nth-child(2){
+    left: 80px;
+    background-color: rgba(0, 0, 255, 0.5);
+    animation-duration: 1s;
+ }
+ .balloon:nth-child(2)::after{
+    border-bottom: 12px solid blue;
+ }
+ .balloon:nth-child(3){
+    left: 150px;
+    background-color: rgba(255, 255, 0, 0.5);
+    animation-duration: 2s;
+ }
+ .balloon:nth-child(3)::after{
+    border-bottom: 12px solid yellow;
+ }
+ .balloon:nth-child(4){
+    left: 220px;
+    background-color: rgba(0, 128, 0, 0.5);
+    animation-duration: 3s;
+
+ }
+ .balloon:nth-child(4)::after{
+    border-bottom: 12px solid green;
+ }
+ .balloon:nth-child(5){
+    left: 1010px;
+    background-color: rgba(218, 6, 6, 0.904);
+    animation-duration: 1s;
+ }
+ .balloon:nth-child(5)::after{
+    border-bottom: 12px solid red;
+ }
+ .balloon:nth-child(6){
+    left: 1100px;
+    background-color: rgba(0, 0, 255, 0.5);
+    animation-duration: 2s;
+ }
+ .balloon:nth-child(6)::after{
+    border-bottom: 12px solid blue;
+ }
+ .balloon:nth-child(7){
+    left: 1175px;
+    background-color: rgba(255, 255, 0, 0.5);
+    animation-duration: 3s;
+ }
+ .balloon:nth-child(7)::after{
+    border-bottom: 12px solid yellow;
+ }
+ .balloon:nth-child(8){
+    left: 1255px;
+    background-color: rgba(0, 128, 0, 0.5);
+    animation-duration: 4s;
+ }
+ .balloon:nth-child(8)::after{
+    border-bottom: 12px solid green;
+ }
+ h3{
+    font-size: 50px;
+    margin-top: 100px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    animation: effect 2s linear infinite;
+ }
+
+ @keyframes move-up{
+   0%{
+      top:69%;
+   }
+   100%{
+      top: 0%;
+   }
+ }
+ @media (max-width:550px) {
+    .container .hny h3 {
+        background-position: 50%;
+    }
+    
+}
+
+ 
+ 
